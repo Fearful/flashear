@@ -1,0 +1,85 @@
+{
+	"alt_home": "Inicio",
+	"alt_trending": "Explorar",
+	"alt_global": "Todos",
+	"alt_chat": "Chats",
+	"alt_login": "Ingresar",
+	"alt_logout": "Salir",
+	"logout_aria": "Salir",
+	"new_post": "Crear nuevo",
+	"post_popup": {
+		"title": "Crear nuevo flash",
+		"contentLabel": "Contenido",
+		"contentAria": "Area de contenido",
+		"publishLabel": "Publicar",
+		"publishAria": "Boton para publicar"
+	},
+	"empty_items": {
+		"message": "No hay nada nuevo! Empieza una conversacion :D"
+	},
+	"home": {
+		"title": "Inicio",
+		"description": "",
+		"top10Title": "Top desde hace un rato",
+		"typewriterTitle": "Un lugar donde",
+		"typewriterList": [
+			"expresarse",
+			"charlar",
+			"flashear",
+			"boludear",
+			"contener",
+			"apreciar",
+			"participar",
+			"comunicar",
+			"compartir ideas",
+			"conversar",
+			"desahogar",
+			"aflojar",
+			"calmarse",
+			"interpretar"
+		],
+		"bottomMessage": "*Esta es una dApp, una app decentralizada anonima y encriptada entre usuarios. Tecnologias: Svelte, Gun.eco, WebRTC. Libre para replicar, compartir y usar. @Fearful"
+	},
+	"auth": {
+		"title": "Iniciar sesion || Registrarse",
+		"description": "",
+		"form": {
+			"userLabel": "Nombre de usuario:",
+			"passwordLabel": "Contraseña:",
+			"loginButton": "Iniciar sesion",
+			"signupButton": "Registrarse",
+			"loginLabel": "Boton de Iniciar sesion",
+			"signupLabel": "Boton de Registro"
+		}
+	},
+	"my": {
+		"title": "Mis flashes",
+		"description": "",
+		"mine":"My Flashs",
+		"replies":"My replies to others"
+	},
+	"chat": {
+		"title": "Chat",
+		"description": ""
+	},
+	"trending": {
+		"title": "Explorar",
+		"description": ""
+	},
+	"all": {
+		"title": "Todos",
+		"description": ""
+	},
+	"components":{
+		"card": {
+			"actions": {
+				"reportAlt": "Icono de Reporte",
+				"likeAlt": "Icono de Like",
+				"replyAlt": "Icono de Responder",
+				"reportAction": "Reportar",
+				"likeAction": "Like",
+				"replyAction": "Responder"
+			}
+		}
+	}
+}

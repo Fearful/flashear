@@ -1,0 +1,84 @@
+{
+	"alt_home": "Home",
+	"alt_trending": "Trending",
+	"alt_global": "All",
+	"alt_chat": "Chats",
+	"alt_login": "Login",
+	"alt_logout": "Logout",
+	"logout_aria": "Logout",
+	"new_post": "Create new",
+	"post_popup": {
+		"title": "Create new flash",
+		"contentLabel": "Content",
+		"contentAria": "Content area input",
+		"publishLabel": "Publish",
+		"publishAria": "Publish button"
+	},
+	"empty_items": {
+		"message": "Nothing new! Start a discussion :D"
+	},
+	"home": {
+		"title": "Home",
+		"description": "",
+		"top10Title": "The latest top flashes",
+		"typewriterTitle": "A place where to",
+		"typewriterList": [
+			"express yourself",
+			"talk",
+			"fly in thoughts",
+			"chill",
+			"include",
+			"appreciate",
+			"participate",
+			"say something",
+			"share ideas",
+			"hangout",
+			"loosen up",
+			"be calm",
+			"interpret"
+		],
+		"bottomMessage": "*This is a dApp, a decentralized anonymous and encrypted app between peers. Stack: Svelte, Gun.eco, WebRTC. Free for replication, share and use. @Fearful"
+	},
+	"auth": {
+		"title": "Login || Register",
+		"description": "",
+		"form": {
+			"userLabel": "Username:",
+			"passwordLabel": "Password:",
+			"loginButton": "Login",
+			"signupButton": "Sign up",
+			"loginLabel": "Login Button",
+			"signupLabel": "Sign up button"
+		}
+	},
+	"my": {
+		"title": "My flashes",
+		"description": "",
+		"mine":"My Flashs",
+		"replies":"My replies to others"
+	},
+	"chat": {
+		"title": "Chat",
+		"description": ""
+	},
+	"trending": {
+		"title": "Trending",
+		"description": ""
+	},
+	"all": {
+		"title": "All flashes",
+		"description": ""
+	},
+	"components":{
+		"card": {
+			"actions": {
+				"reportAlt": "Report Icon",
+				"likeAlt": "Like Icon",
+				"replyAlt": "Reply Icon",
+				"reportAction": "Report",
+				"likeAction": "Like",
+				"replyAction": "Reply"
+			}
+		}
+	}
+}
