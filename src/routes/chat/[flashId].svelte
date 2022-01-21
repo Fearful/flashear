@@ -18,8 +18,8 @@
 			if (!data) return;
 			flash = {
 				id: id,
-				what: data.content, // force decrypt as text.
-				when: GUN.state.is(data, 'when') // get the internal timestamp for the what property.
+				what: data.content,
+				when: GUN.state.is(data, 'when')
 			};
 		});
 	const test = db

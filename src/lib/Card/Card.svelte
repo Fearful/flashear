@@ -4,7 +4,7 @@
 	export let actions = true;
 	export let id ="";
 	let showActions = false, clickTimer = null;
-	const callActions = (event) =>{
+	const openActions = (event) =>{
 		if (actions === true) showActions = true;
 		if (typeof actions === 'function') actions(event);
 	}
@@ -19,19 +19,12 @@
 		} else {
 			clearTimeout(clickTimer);
 			clickTimer = null;
-			callActions(event);
+			openActions(event);
 		}
-	}
-	const touchLeave = () => {
-		closeActions();
 	}
 </script>
 
-<div class="p-4 shadow-md border-2 border-gray-200 rounded-lg h-fit space-y-3 whitespace-pre-line" style="min-width: 14em;max-width: 15em;" on:touchleave={touchLeave}
-	on:touchstart={touchStart}
-	on:dblclick={callActions}
-	on:mouseleave={closeActions}
-	id={id}>
+<div id={id} class="card-container" on:touchleave={closeActions} on:touchstart={touchStart} on:dblclick={openActions} on:mouseleave={closeActions} >
 	{#if showActions}
 		<Actions on:like on:report on:reply />
 	{/if}
@@ -39,3 +32,11 @@
 		<slot />
 	</div>
 </div>
+
+<style lang="postcss">
+	.card-container {
+		@apply p-4 shadow-md border-2 border-gray-200 rounded-lg h-fit space-y-3 whitespace-pre-line;
+		min-width: 14em;
+		max-width: 15em;
+	}
+</style>

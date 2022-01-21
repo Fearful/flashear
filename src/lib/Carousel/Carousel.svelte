@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import Card from '$lib/Card/Card.svelte';
+	import Ghost from '$lib/Ghost/Card.svelte';
 
 	export let items = [], noActionFor, title = '';
 	const backgrounds = [
@@ -31,13 +32,7 @@
 	<div class="w-full flex gap-4 snap-x overflow-x-auto p-4 pb-8 mt-2">
 		{#if items.length === 0}
 			{#each ghosts as ghost}
-				<div class="animate-pulse p-4 shadow-md border-2 border-gray-200 rounded-lg h-fit space-y-3 whitespace-pre-line" style="min-width: 15rem;">
-					<div class="grid grid-cols-3 gap-4">
-						<div class="h-2 bg-gray-300 rounded col-span-2" />
-						<div class="h-2 bg-gray-300 rounded col-span-1" />
-					</div>
-					<div class="h-2 bg-gray-300 rounded" />
-				</div>
+				<Ghost />
 			{/each}
 		{/if}
 		{#each items as flash}

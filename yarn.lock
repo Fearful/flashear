@@ -827,7 +827,7 @@ at-least-node@^1.0.0:
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
-autoprefixer@^10.4.0:
+autoprefixer@^10.4.2:
   version "10.4.2"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.2.tgz#25e1df09a31a9fba5c40b578936b90d35c9d4d3b"
   integrity sha512-9fOPpHKuDW1w/0EKfRmVnxTDt8166MAnLI3mgZ1JCnhNtYWxcJ6Ud5CO/AVOZi/AvFa8DY9RTy3h3+tFBlrrdQ==
@@ -3577,7 +3577,7 @@ postcss-js@^4.0.0:
   dependencies:
     camelcase-css "^2.0.1"
 
-postcss-load-config@^3.1.0:
+postcss-load-config@^3.1.0, postcss-load-config@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-3.1.1.tgz#2f53a17f2f543d9e63864460af42efdac0d41f87"
   integrity sha512-c/9XYboIbSEUZpiD1UQD0IKiUe8n9WHYV7YFe7X7J+ZwCsEKkUJSFWjS9hBU1RR9THR7jMXst8sxiqP0jjo2mg==
@@ -4442,7 +4442,7 @@ table@^6.0.9:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
-tailwindcss@^3.0.15:
+tailwindcss@^3.0.12:
   version "3.0.15"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.15.tgz#e4db219771eb7678a3bfd97b3f6c8fe20be0a410"
   integrity sha512-bT2iy7FtjwgsXik4ZoJnHXR+SRCiGR1W95fVqpLZebr64m4ahwUwRbIAc5w5+2fzr1YF4Ct2eI7dojMRRl8sVQ==

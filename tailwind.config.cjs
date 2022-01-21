@@ -1,7 +1,12 @@
-const withAnimations = require('animated-tailwindcss');
-
-module.exports = withAnimations({
+const config = {
 	mode: 'jit',
-	content: ['./src/**/*.svelte'],
-	safelist: ['animate-hinge', 'shadow-inner', 'snap-x', 'snap-center']
-});
+	content: ['./src/**/*.{html,js,svelte,ts}'],
+
+	theme: {
+		extend: {}
+	},
+
+	plugins: []
+};
+
+module.exports = config;
