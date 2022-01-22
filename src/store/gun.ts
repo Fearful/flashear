@@ -24,5 +24,5 @@ Gun.chain.subscribe = function (subscriber) {
 		}
 	};
 };
-export const gun = Gun('http://flashear.chat:8765');
+export const gun = Gun();
 gun.subscribe();

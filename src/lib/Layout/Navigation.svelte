@@ -1,15 +1,20 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
 
 	export let isLoggedIn = false;
+	let vh;
+	onMount(() => {
+		vh = window.innerHeight * 0.01;
+	})
+
 	const dispatch = createEventDispatcher();
 	function logoutUser() {
 		dispatch('logout');
 	}
 </script>
 
-<nav class="nav-container">
+<nav class="nav-container" style={vh ? ['height:', (vh * 100 + 'px')].join('') : 'height:100vh'}>
 	<ul>
 		<li class="nav-buttons">
 			<a href="/" class="nav-link nav-home">
@@ -56,7 +61,7 @@
 
 <style lang="postcss">
 	.nav-container {
-		@apply flex flex-col justify-between h-screen items-center bg-white;
+		@apply flex flex-col justify-between items-center bg-white;
 		min-width: 80px;max-width: 80px;
 	}
 	.nav-link {
