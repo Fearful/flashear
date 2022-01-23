@@ -8,7 +8,7 @@
 
 <style lang="postcss">
 	.empty-container {
-		@apply grid place-items-center h-screen;
+		@apply grid place-items-center h-screen w-48 text-center mx-auto dark:text-slate-200;
 	}
 	.empty-text {
 		@apply inline-block align-middle font-semibold;

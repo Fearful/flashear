@@ -3,7 +3,13 @@ const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			colors: ({ colors }) => ({
+				accentColor: colors.purple,
+				backgroundDark: colors.zinc,
+				backgroundLight: colors.slate,
+			}),
+		}
 	},
 
 	plugins: []

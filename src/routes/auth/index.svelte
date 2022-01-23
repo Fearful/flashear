@@ -73,15 +73,15 @@
 
 <style lang="postcss">
 	.auth-container {
-		@apply flex flex-col w-80 rounded-lg px-8 py-10;
+		@apply flex flex-col w-80 rounded-lg px-8 py-10 dark:text-white;
 	}
 	.auth-form {
 		@apply flex flex-col space-y-4 mt-10;
 	}
 	.auth-form-input {
-		@apply border rounded-lg py-3 px-3 bg-gray-300 shadow-inner border-gray-300 shadow-inner placeholder-gray-500;
+		@apply border rounded-lg py-3 px-3 shadow-inner dark:bg-backgroundDark-800 dark:border-backgroundDark-800 shadow-inner;
 	}
 	.auth-submit-button {
-		@apply border border-blue-500 bg-blue-500 text-white rounded-lg py-3 px-0.5 font-semibold w-1/2;
+		@apply border border-accentColor-700 bg-accentColor-700 text-white rounded-lg py-3 px-0.5 font-semibold w-1/2 hover:bg-accentColor-500;
 	}
 </style>

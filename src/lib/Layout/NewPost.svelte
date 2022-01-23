@@ -47,7 +47,7 @@
 {#if visible}
 	<div class="fixed top-8 right-6">
 		<div class="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
-			<div class="bg-white w-full shadow-md rounded p-6 sm:p-12">
+			<div class="bg-white w-full shadow-md rounded p-6 sm:p-12 dark:bg-backgroundDark-800 dark:text-white">
 				<p class="text-3xl font-bold leading-7 text-center">{$_('post_popup.title')}</p>
 				<form on:submit|preventDefault={onSubmit}>
 					<div>
@@ -56,7 +56,7 @@
 							<textarea
 								bind:value={msg}
 								type="text"
-								class="h-40 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
+								class="h-40 text-base leading-none text-backgroundDark p-3 focus:oultine-none focus:border-accentColor-700 mt-4 border rounded border-backgroundLight-400 dark:border-backgroundDark-400 dark:bg-backgroundDark-700"
 								id="contentIdentifier"
 							/>
 						</div>
@@ -65,7 +65,7 @@
 						<button
 							aria-label={$_('post_popup.publishAria')}
 							on:click={submitMsg}
-							class="mt-9 font-semibold leading-none text-white py-4 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none"
+							class="mt-9 font-semibold leading-none text-white py-4 px-10 bg-accentColor-700 rounded hover:bg-accentColor-700 focus:ring-2 focus:ring-offset-2 focus:ring-accentColor-700 focus:outline-none"
 						>
 							{$_('post_popup.publishLabel')}
 						</button>
@@ -82,7 +82,7 @@
 		on:click={() => {
 			visible = !visible;
 		}}
-		class="new-flash p-0 w-16 h-16 bg-red-600 rounded-full hover:bg-red-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none"
+		class="new-flash p-0 w-16 h-16 bg-accentColor-700 rounded-full hover:bg-accentColor-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none"
 	>
 		<svg viewBox="0 0 20 20" enable-background="new 0 0 20 20" class="w-6 h-6 inline-block">
 			<path

@@ -53,6 +53,7 @@
 			<li class="nav-buttons auth-buttons">
 				<a href="/auth" class="nav-login" >
 					<img width="24" height="24" src="/icons/navigation/login.svg" alt={$_('alt_login')} />
+
 				</a>
 			</li>
 		{/if}
@@ -61,14 +62,14 @@
 
 <style lang="postcss">
 	.nav-container {
-		@apply flex flex-col justify-between items-center bg-white;
+		@apply flex flex-col justify-between items-center bg-white dark:bg-backgroundDark-800;
 		min-width: 80px;max-width: 80px;
 	}
 	.nav-link {
-		@apply h-16 px-6 flex flex justify-center items-center w-full focus:text-orange-500;
+		@apply h-16 px-6 flex flex justify-center items-center w-full focus:text-accentColor-200;
 	}
 	.nav-buttons {
-		@apply hover:bg-gray-100;
+		@apply hover:bg-backgroundLight-100 dark:hover:bg-backgroundDark-700;
 	}
 	.auth-buttons-container {
 		@apply mt-auto h-16 w-full flex justify-center items-center;

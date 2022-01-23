@@ -9,7 +9,7 @@
 	<title>{$_('home.title')} - Flashear</title>
 </svelte:head>
 
-<section class="common-padding text-center">
+<section class="common-padding text-center dark:text-white">
 	<h1 class="text-2xl">{$_('home.typewriterTitle')}</h1>
 	<div class="pl-3.5">
 		<Typewriter loopRandom>
@@ -31,6 +31,6 @@
 		@apply p-8 h-40;
 	}
 	.disclaimer-text {
-		@apply text-xs text-gray-600;
+		@apply text-xs dark:text-backgroundDark-300;
 	}
 </style>

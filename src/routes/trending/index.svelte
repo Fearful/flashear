@@ -4,7 +4,6 @@
 	import { _ } from 'svelte-i18n';
 	import Carousel from '$lib/Carousel/Carousel.svelte';
 	import Empty from '$lib/Empty/Empty.svelte';
-	import NewPost from '$lib/Layout/NewPost.svelte';
 	import { globalFlashes, matchByDate, username } from '../../store';
 	import party from 'party-js';
 	let listOfFlashes = [];
@@ -86,7 +85,7 @@
 	<title>{$_('trending.title')} - Flashear</title>
 </svelte:head>
 
-<div class="overflow-y-auto w-full h-full">
+<div class="overflow-y-auto w-full h-full dark:text-slate-200">
 	{#if Object.keys(categories).length > 0}
 		{#each Object.keys(categories) as category}
 			<Carousel title={category} items={categories[category]} on:like={onLike} on:reply={onReply} on:report={onReport} noActionFor={$username} />
@@ -95,5 +94,3 @@
 		<Empty />
 	{/if}
 </div>
-
-<NewPost />

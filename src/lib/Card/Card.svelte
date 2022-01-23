@@ -35,7 +35,7 @@
 
 <style lang="postcss">
 	.card-container {
-		@apply p-4 shadow-md border-2 border-gray-200 rounded-lg h-fit space-y-3 whitespace-pre-line;
+		@apply p-4 shadow-md border-2 bg-backgroundLight-200 border-backgroundLight-200 dark:bg-backgroundDark-800 dark:border-backgroundDark-700 rounded-md h-fit space-y-3 whitespace-pre-line;
 		min-width: 14em;
 		max-width: 15em;
 	}
