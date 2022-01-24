@@ -10,6 +10,7 @@
 	import '../app.css';
 
 	let path = '';
+	let isNewPostDialogVisible = false;
 	beforeNavigate(({ from, to }) => {
 		if (to) path = to.pathname; // Triggers navigation transition
 	});
@@ -18,18 +19,30 @@
 		user.leave();
 		username.set('');
 	}
+
+	function handleNewPost(event) {
+		isNewPostDialogVisible = !isNewPostDialogVisible;
+	}
+
 </script>
+
 {#if !$isLoading}
-	<div class="flex bg-slate-100 dark:bg-zinc-900">
-		<Navigation isLoggedIn={$username} on:logout={handleLogout} />
-		<main class="flex flex-col justify-between" style="width: calc(100vw - 80px);">
-			<RouteTransition referesh={path + $locale}>
-				<slot />
-			</RouteTransition>
-		</main>
+	<div class="app-container">
+		<Navigation isLoggedIn={$username} on:logout={handleLogout} on:new={handleNewPost} />
+		<RouteTransition referesh={path + $locale}>
+			<slot />
+		</RouteTransition>
 	</div>
+	<NewPost visible={isNewPostDialogVisible} />
 {/if}
 
-{#if (path !== '/auth' && path !== '/chat')}
-	<NewPost />
-{/if}
+<style lang="postcss">
+	.app-container {
+		@apply flex flex-col md:flex-row bg-slate-100 dark:bg-zinc-900 h-screen;
+	}
+	@media (max-width: 768px) {
+		.app-container {
+			height: calc(100vh - 63px);
+		}
+	}
+</style>

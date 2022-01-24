@@ -35,8 +35,8 @@
 	}
 </script>
 
-<div class="min-h-screen bg-gray-100 p-8 w-fit">
-	<main on:scroll={debouncedWatchScroll} class="max-w-4xl mx-auto space-y-12 grid grid-cols-1">
+<div class="p-8">
+	<main on:scroll={debouncedWatchScroll} class="mx-auto space-y-12 grid grid-cols-1">
 		{#each messages as message (message.when)}
 			<ChatMsg {message} sender={$username} />
 		{/each}
@@ -44,7 +44,7 @@
 		<div class="dummy" bind:this={scrollBottom} />
 	</main>
 
-	<form on:submit|preventDefault={sendMessage}>
+	<form on:submit|preventDefault={sendMessage}  class="w-auto mx-auto">
 		<input
 			type="text"
 			placeholder="Escribe..."
@@ -53,7 +53,7 @@
 			{disabled}
 		/>
 
-		<button type="submit" disabled={!newMessage}>💥</button>
+		<button type="submit" disabled={!newMessage}>Enviar</button>
 	</form>
 
 	{#if !canAutoScroll}

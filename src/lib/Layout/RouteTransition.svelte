@@ -4,18 +4,33 @@
 	export let referesh = '';
 	let vh;
 	onMount(() => {
-		vh = window.innerHeight * 0.01;
+		if(window.innerWidth < 768) {
+			vh = window.innerHeight * 0.01;
+		} else {
+			vh = undefined;
+		}
 	})
 
 </script>
 
 {#key referesh}
-	<div
-		class="w-full"
-		style={vh ? ['height:', (vh * 100 + 'px')].join('') : 'height:100vh'}
+	<main
+		class="main-container"
 		in:blur={{ duration: 300, delay: 100, amount: 5 }}
 		out:blur={{ duration: 300 }}
+		style={vh ? ['min-height:', (((vh * 100) - 63) + 'px')].join('') : ''}
 	>
 		<slot />
-	</div>
+	</main>
 {/key}
+
+<style lang="postcss">
+	.main-container {
+		@apply w-screen h-full mb-24;
+	}
+	@media (min-width: 768px) {
+		.main-container {
+			width: calc(100vw - 80px);
+		}
+	}
+</style>

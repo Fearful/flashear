@@ -82,8 +82,8 @@
 						what: chatMsgs[chatKeys[0]].content,
 						when: chatKeys[0]
 					};
-					debugger;
-					addToMessages(message, chatKeys[i]);
+
+					addToMessages(message, chatKeys[0]);
 					return;
 				}
 				// Get our keys for the chat based on the encryptedChatKeys
@@ -151,7 +151,7 @@
 			// Use the replierPub and our keys and encrypt a message so only the replier can read
 			const myPairOfKeys = JSON.parse(sessionStorage.getItem('pair'));
 			const encryptedMessageKeys = await SEA.encrypt(
-				newPair,
+				currentChatKeys,
 				await SEA.secret(replierPub, myPairOfKeys)
 			);
 
@@ -174,7 +174,7 @@
 {#if originalFlash !== null}
 	<div class="place-self-end text-center">
 		<div class="p-5 rounded-2xl bg-white rounded-tl-none">
-			<p class="inline pl-2">{originalFlash.content}</p>
+			<p class="inline pl-2">{@html originalFlash.content}</p>
 		</div>
 	</div>
 {/if}

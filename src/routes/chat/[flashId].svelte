@@ -55,11 +55,15 @@
 	<title>{$_('chat.title')} - Flashear</title>
 </svelte:head>
 
-<section class="overflow-hidden">
+<section class="overflow-hidden flex flex-col justify-items-stretch w-full h-full">
 	{#if flash}
-		<Card>
-			<p>{flash.what}</p>
-		</Card>
-		<Chat {messages} on:sendMessage={sendMsg} disabled={false} />
+		<div class="mx-auto p-4">
+			<Card>
+				<p>{@html flash.what}</p>
+			</Card>
+		</div>
+		<div class="mx-auto p-4">
+			<Chat {messages} on:sendMessage={sendMsg} disabled={false} />
+		</div>
 	{/if}
 </section>

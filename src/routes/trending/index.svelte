@@ -85,7 +85,7 @@
 	<title>{$_('trending.title')} - Flashear</title>
 </svelte:head>
 
-<div class="overflow-y-auto w-full h-full dark:text-slate-200">
+<div class="trending-container">
 	{#if Object.keys(categories).length > 0}
 		{#each Object.keys(categories) as category}
 			<Carousel title={category} items={categories[category]} on:like={onLike} on:reply={onReply} on:report={onReport} noActionFor={$username} />
@@ -94,3 +94,9 @@
 		<Empty />
 	{/if}
 </div>
+
+<style lang="postcss">
+	.trending-container {
+		@apply overflow-y-auto h-full w-full dark:text-slate-200;
+	}
+</style>

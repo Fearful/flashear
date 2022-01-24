@@ -108,7 +108,7 @@
 	<title>{$_('my.title')} - Flashear</title>
 </svelte:head>
 
-<section class="overflow-hidden  p-4">
+<section class="overflow-hidden p-4 dark:text-slate-200">
 	<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 items-center">
 		<div class="h-full">
 			<div>{$_('my.mine')}</div>

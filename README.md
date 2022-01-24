@@ -3,7 +3,7 @@
 This is the repository of [`flashear.app`](https://flashear.app), a decentralized social webapp.
 Este es el repositorio de [`flashear.app`](https://flashear.app), una web app social decentralizada.
 
-## Features:
+## Features tecnicas / Technical features:
 - Typescript
 - Cypress testing
 - Sveltekit
@@ -15,6 +15,13 @@ Este es el repositorio de [`flashear.app`](https://flashear.app), una web app so
 - PostCSS
 
 Powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+
+## Functionality list:
+- ~~Encrypted one to one message channels with key generation per conversation~~
+- ~~Automatic generated tags based on "#"~~
+- ~~Automatic purge of posts after three hours~~ ?
+- Automatic purge of any message that is reported
+- Lists all relevant content on the homepage
 
 ## Developing/Desarrollo
 
@@ -52,9 +59,11 @@ npm run build
 
 v 0.1
 
+- mayor redesign for mobile, needs testing
 - clean and repair ui in /my
 - clean and repair ui in /chat
 - refactor and delete repeating code
+- fix flashing content on page transition on desktop
 
 
 v 0.2

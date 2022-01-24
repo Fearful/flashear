@@ -5,14 +5,14 @@
 	const messageClass = message.who !== sender ? 'sent' : 'received';
 	const secondaryClass =
 		messageClass === 'sent'
-			? ' bg-white rounded-tl-none'
-			: 'bg-green-50 text-green-900 rounded-tr-none';
+			? ' bg-white rounded-tl-none dark:bg-backgroundDark-700 dark:text-white'
+			: 'bg-accentColor-50 text-accentColor-900 dark:bg-accentColor-800 dark:text-accentColor-50 rounded-tr-none';
 	const avatar = `https://avatars.dicebear.com/api/initials/${message.who}.svg`;
 
 	const ts = new Date(message.when);
 </script>
 
-<div class={`place-self-${messageClass === 'sent' ? 'end text-right' : 'start text-left'}`}>
+<div class={`place-self-${messageClass !== 'sent' ? 'end text-right' : 'start text-left'}`}>
 	<div class={`p-5 rounded-2xl ${secondaryClass}`}>
 		<img src={avatar} alt="avatar" class="rounded-full w-8 inline" />
 		<p class="inline pl-2">{message.what}</p>

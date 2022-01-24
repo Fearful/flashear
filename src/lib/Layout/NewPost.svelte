@@ -3,8 +3,8 @@
 	import { _ } from 'svelte-i18n';
 	import { db, user, username } from '../../store';
 	// los hashtags deben venir de la publicacion misma, de no contener asignar por defecto pienso
-
-	let visible = false, msg = '', category = ['n00b'];
+	export let visible = false;
+	let msg = '', category = ['n00b'];
 	const hashtagRegex = /\B#([a-z0-9]{2,})(?![~!@#$%^&*()=+_`\-\|\/'\[\]\{\}]|[?.,]*\w)/ig;
 
 	const flashes = db.get('flashes');
@@ -16,6 +16,7 @@
 
 	function submitMsg() {
 		if (!user.is) {
+			visible = !visible;
 			goto('/auth');
 			return;
 		}
@@ -36,7 +37,7 @@
 		});
 		msg = '';
 		category = ['n00b'];
-		visible = false;
+		visible = !visible;
 	}
 	function onSubmit(e) {
 		e.preventDefault();
@@ -76,7 +77,7 @@
 	</div>
 {/if}
 
-<div class="fixed bottom-4 right-4">
+<div class="new-post-button">
 	<button
 		aria-label={$_('new_post')}
 		on:click={() => {
@@ -94,3 +95,14 @@
 		</svg>
 	</button>
 </div>
+
+<style lang="postcss">
+	.new-post-button {
+		@apply fixed bottom-4 right-4;
+	}
+	@media (max-width: 768px) {
+		.new-post-button {
+			display: none;
+		}
+	}
+</style>

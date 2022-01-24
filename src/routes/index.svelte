@@ -24,8 +24,6 @@
 	<p class="disclaimer-text">{$_('home.bottomMessage')}</p>
 </section>
 
-<NewPost />
-
 <style lang="postcss">
 	.common-padding {
 		@apply p-8 h-40;

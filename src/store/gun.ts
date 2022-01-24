@@ -24,5 +24,5 @@ Gun.chain.subscribe = function (subscriber) {
 		}
 	};
 };
-export const gun = Gun();
+export const gun = Gun('localhost:8000');
 gun.subscribe();

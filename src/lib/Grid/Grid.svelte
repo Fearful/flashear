@@ -9,7 +9,7 @@
 		.map((_, i) => i);
 </script>
 
-<div class="w-full flex gap-4 snap-x overflow-x-auto p-4 pb-8 mt-2">
+<div class="w-full flex gap-4 snap-x overflow-x-auto p-4 pb-8 mt-2 dark:text-slate-200">
 	{#if items.length === 0}
 		{#each ghosts as ghost}
 			<Ghost />
